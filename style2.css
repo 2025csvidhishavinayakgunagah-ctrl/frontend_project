@@ -1,0 +1,353 @@
+/* Basic Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: #174d2b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd54f;
+}
+
+
+/* Hero Section */
+
+.hero {
+    height: 550px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 60, 30, 0.6),
+            rgba(0, 60, 30, 0.6)
+        ),
+        url("images/karnataka.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #e6a817;
+    color: white;
+
+    padding: 13px 28px;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #c98e0c;
+}
+
+
+/* Common Sections */
+
+section {
+    padding: 60px 8%;
+}
+
+section h2 {
+    text-align: center;
+    color: #174d2b;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+
+/* Introduction */
+
+.intro {
+    text-align: center;
+    background-color: white;
+}
+
+.intro p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+}
+
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #174d2b;
+    margin: 15px 10px 8px;
+}
+
+.card p {
+    padding: 0 18px 20px;
+}
+
+
+/* Light Background */
+
+.light {
+    background-color: #e9f2e7;
+}
+
+
+/* Food Section */
+
+.food-section {
+    background-color: #fff;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.food {
+    background-color: #f3f7ee;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food span {
+    font-size: 45px;
+}
+
+.food h3 {
+    color: #174d2b;
+    margin: 10px 0;
+}
+
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+
+/* Travel Section */
+
+.travel {
+    background-color: #e9f2e7;
+}
+
+.travel-box {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.travel-box div {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.travel-box h3 {
+    color: #174d2b;
+    margin-bottom: 8px;
+}
+
+.travel-note {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #174d2b;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-box {
+        grid-template-columns: 1fr;
+    }
+}
